@@ -1,10 +1,16 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+
+import { defineComponent, ref } from "vue";
+const vitePort = ref(import.meta.env.VITE_PORT);
+const mode = ref(import.meta.env.MODE);
 </script>
 
 <template>
+  <div>Mode:{{ mode }}</div>
+  <div>VitePort:{{ vitePort }}</div>
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
